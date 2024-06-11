@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="350.0" style="-fx-background-color: #0a3152;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finalprog.ControllerRegisterForWork">
+   <children>
+      <ImageView fitHeight="71.0" fitWidth="73.0" layoutX="14.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logo.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="85.0" layoutY="10.0" prefHeight="54.0" prefWidth="256.0" text="Регистрация" textFill="WHITE">
+         <font>
+            <Font size="44.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="-1.0" layoutY="84.0" prefHeight="590.0" prefWidth="339.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <GridPane layoutX="1.0" prefHeight="40.0" prefWidth="350.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="ButForNotWork" mnemonicParsing="false" onAction="#butNotWork" prefHeight="124.0" prefWidth="188.0" style="-fx-background-color: #ffffff; -fx-border-color: #0a3152;" text="Для не имеющих работы" textFill="#0a3152" />
+                  <Button fx:id="ButForCompany" mnemonicParsing="false" onAction="#butForComp" prefHeight="88.0" prefWidth="223.0" style="-fx-background-color: #0a3152; -fx-border-color: #ffffff;" text="Для работников компаний" textFill="WHITE" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <Button fx:id="ButtonRegister" layoutX="14.0" layoutY="536.0" mnemonicParsing="false" onAction="#butRegister" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #0a3152;" text="Регистрация" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="14.0" layoutY="52.0" text="ФИО:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="FieldFIO" layoutX="14.0" layoutY="78.0" onAction="#fieldFIO" prefHeight="45.0" prefWidth="323.0" style="-fx-border-color: #0a3152;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="15.0" layoutY="135.0" prefHeight="46.0" prefWidth="61.0" text="Город: ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="FieldCity" layoutX="82.0" layoutY="135.0" onAction="#fieldCity" prefHeight="46.0" prefWidth="256.0" style="-fx-border-color: #0a3152;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="17.0" layoutY="181.0" text="Личная почта:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="FieldPersMail" layoutX="14.0" layoutY="208.0" onAction="#fieldPersMail" prefHeight="45.0" prefWidth="323.0" style="-fx-border-color: #0a3152;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="15.0" layoutY="397.0" text="Пароль:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="254.0" text="Название компании:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="FieldNameComp" layoutX="14.0" layoutY="280.0" onAction="#fieldNameComp" prefHeight="45.0" prefWidth="323.0" style="-fx-border-color: #0a3152;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="Password" layoutX="15.0" layoutY="424.0" onAction="#getPassword" prefHeight="46.0" prefWidth="323.0" style="-fx-border-color: #0a3152;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <Label layoutX="14.0" layoutY="326.0" text="Почта компании:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="FieldMailComp" layoutX="14.0" layoutY="352.0" onAction="#fieldMailComp" prefHeight="45.0" prefWidth="323.0" style="-fx-border-color: #0a3152;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label fx:id="LabelError" layoutX="112.0" layoutY="510.0" text="Допущеная ошибка" textFill="RED" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="ButtonExit" layoutX="198.0" layoutY="536.0" mnemonicParsing="false" onAction="#butExit" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: #fde6a2;" text="Назад" textFill="#0a3152">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
